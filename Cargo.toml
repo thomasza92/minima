@@ -1,0 +1,38 @@
+[package]
+name = "minima"
+version = "0.0.1"
+edition = "2024"
+categories = ["game-engines", "graphics", "gui", "rendering"]
+description = "An experimental game engine"
+keywords = ["game", "engine", "gamedev", "graphics"]
+repository = "https://github.com/thomasza92/minima"
+
+[dependencies]
+wgpu = { workspace = true }
+glam = { workspace = true }
+winit = { workspace = true }
+egui = { version = "0.33.2" }
+egui-winit = { version = "0.33.2" }
+egui-wgpu = { version = "0.33.2", features = ["winit"] }
+pollster = "0.4.0"
+env_logger = "0.11.8"
+log = "0.4.28"
+minima-runtime = { path = "crates/minima-runtime" }
+serde = { version = "1.0.228", features = ["derive"] }
+toml = "0.9.8"
+
+[workspace]
+resolver = "2"
+members = [
+    "crates/minima-3d",
+    "crates/minima-camera",
+    "crates/minima-gltf",
+    "crates/minima-runtime",
+    "crates/minima-scene",
+]
+
+[workspace.dependencies]
+bytemuck = { version = "1.24.0", features = ["derive"] }
+wgpu = { version = "27.0.1" }
+glam = { version = "0.30.8" }
+winit = { version = "0.30.12" }

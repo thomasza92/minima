@@ -1,0 +1,8 @@
+[package]
+name = "minima-scene"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+glam = { workspace = true }
+minima-3d = { path = "../minima-3d" }

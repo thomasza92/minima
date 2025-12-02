@@ -1,0 +1,14 @@
+[package]
+name = "minima-runtime"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+winit = { workspace = true }
+wgpu = { workspace = true }
+glam = { workspace = true }
+bytemuck = { workspace = true }
+minima-3d = { path = "../minima-3d" }
+minima-camera = { path = "../minima-camera" }
+minima-gltf = { path = "../minima-gltf" }
+minima-scene = { path = "../minima-scene", optional = true }

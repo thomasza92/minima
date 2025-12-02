@@ -1,2 +1,3 @@
 # minima
-game engine
+
+An experimental game engine
